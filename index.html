@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Gerador de Link WhatsApp + QR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <h1>Gerador de Link WhatsApp + QR</h1>
+            <p class="lead">Crie link para WhatsApp e QR code, ou QR de qualquer link.</p>
+        </header>
+
+        <section class="card">
+            <div class="row">
+                <div>
+                    <label>DDI</label>
+                    <input id="ddi" class="small" type="text" placeholder="55">
+                </div>
+                <div>
+                    <label>DDD</label>
+                    <input id="ddd" class="small" type="text" placeholder="31">
+                </div>
+                <div style="flex:1">
+                    <label>Telefone</label>
+                    <input id="phone" type="text" placeholder="987654321">
+                </div>
+            </div>
+
+            <div class="row">
+                <div style="flex:1">
+                    <label>Mensagem</label>
+                    <textarea id="message" placeholder="Olá! Gostaria de mais informações..."></textarea>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="genBtn">Gerar WhatsApp + QR</button>
+                <button id="clearBtn" class="secondary">Limpar</button>
+            </div>
+
+            <div class="output" id="output" style="display:none">
+                <div class="linkBox">
+                    <label>Link WhatsApp</label>
+                    <p id="waLink"></p>
+                    <a id="openWa" target="_blank">Abrir</a>
+                    <a id="copyWa" href="#">Copiar</a>
+                </div>
+                <div class="qrWrap">
+                    <label>QR WhatsApp</label>
+                    <div id="waQr"></div>
+                    <a id="downloadWaQr">Download QR</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <label>Gerar QR de qualquer link</label>
+            <div class="row">
+                <input id="linkInput" type="text" placeholder="https://exemplo.com" style="flex:1">
+                <button id="genLinkQr">Gerar QR</button>
+            </div>
+            <div id="linkQrBox" style="display:none">
+                <div id="linkQr"></div>
+                <p id="linkQrText"></p>
+                <a id="downloadLinkQr">Download QR</a>
+                <a id="openLink" target="_blank">Abrir link</a>
+            </div>
+        </section>
+    </div>
+
+    
+
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>

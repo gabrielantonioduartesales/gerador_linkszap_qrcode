@@ -1,0 +1,130 @@
+:root {
+    --accent: #25D366;
+    --bg: #f6f7fb;
+    --card: #fff;
+    --muted: #666
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: #111;
+    margin: 0;
+    padding: 24px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrap {
+    max-width: 880px;
+    margin: 0 auto
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 20px;
+    margin: 0
+}
+
+p.lead {
+    margin: 0;
+    color: var(--muted)
+}
+
+.card {
+    background: var(--card);
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(12, 20, 40, 0.06);
+}
+
+.row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+    flex-wrap: wrap
+}
+
+label {
+    font-size: 13px;
+    color: var(--muted);
+    display: block;
+    margin-bottom: 6px
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e6e9ef;
+    border-radius: 8px;
+    font-size: 15px
+}
+
+input.small {
+    width: 80px
+}
+
+.controls {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap
+}
+
+button {
+    background: var(--accent);
+    color: white;
+    padding: 10px 14px;
+    border: 0;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer
+}
+
+button.secondary {
+    background: #eee;
+    color: #111
+}
+
+.output {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 14px;
+    margin-top: 14px;
+    align-items: start
+}
+
+.linkBox {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px dashed #e0e4ef;
+    background: #fbfcff
+}
+
+.qrWrap {
+    text-align: center
+}
+
+.qr {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    border: 1px solid #e9edf5;
+    background: white;
+    display: block;
+    margin: auto;
+}
