@@ -1,5 +1,6 @@
 # Gerador de Link WhatsApp + QR Code
 Criado por Gabriel Antonio Duarte Sales
+Link para testar : https://gabrielantonioduartesales.github.io/gerador_linkszap_qrcode/
 
 ## 📋 Descrição
 Uma ferramenta web que permite gerar links para WhatsApp com mensagens pré-definidas e criar QR Codes para esses links ou qualquer outro URL.
