@@ -1,11 +1,11 @@
-Gerador de Link WhatsApp + QR Code
+# Gerador de Link WhatsApp + QR Code
 Criado por Gabriel Antonio Duarte Sales
 
-📋 Descrição
+## 📋 Descrição
 Uma ferramenta web que permite gerar links para WhatsApp com mensagens pré-definidas e criar QR Codes para esses links ou qualquer outro URL.
 
-🚀 Funcionalidades
-✨ Principais
+## 🚀 Funcionalidades
+## ✨ Principais
 Gerador de Link WhatsApp: Cria links diretos para conversas no WhatsApp
 
 QR Code WhatsApp: Gera QR Codes para os links do WhatsApp
@@ -14,7 +14,7 @@ QR Code Universal: Cria QR Codes para qualquer URL
 
 Download de QR Codes: Permite baixar os QR Codes gerados
 
-🎯 Características
+## 🎯 Características
 Interface responsiva e intuitiva
 
 Validação de números de telefone
@@ -25,7 +25,7 @@ Download de imagens QR Code
 
 Design moderno e clean
 
-🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 HTML5 - Estrutura da página
 
 CSS3 - Estilização e design responsivo
@@ -34,7 +34,7 @@ JavaScript Vanilla - Funcionalidades principais
 
 QRCode.js - Biblioteca para geração de QR Codes
 
-📁 Estrutura do Projeto
+## 📁 Estrutura do Projeto
 text
 link/
 ├── index.html          # Página principal
@@ -42,7 +42,7 @@ link/
 ├── main.js             # JavaScript principal
 └── README.md           # Documentação
 🔧 Como Usar
-1. Gerar Link WhatsApp + QR Code
+### 1. Gerar Link WhatsApp + QR Code
 Preencha os campos:
 
 DDI (ex: 55 para Brasil)
@@ -63,7 +63,7 @@ QR Code correspondente
 
 Opções para abrir, copiar link e download QR Code
 
-2. Gerar QR Code de Qualquer Link
+### 2. Gerar QR Code de Qualquer Link
 Cole qualquer URL no campo de texto
 
 Clique em "Gerar QR"
@@ -76,7 +76,7 @@ Download da imagem
 
 Link para abrir a URL
 
-🎨 Personalização
+## 🎨 Personalização
 Cores e Tema
 As cores podem ser personalizadas através das variáveis CSS:
 
@@ -87,7 +87,7 @@ css
     --card: #fff;         /* Cor dos cards */
     --muted: #666         /* Texto secundário */
 }
-📱 Responsividade
+## 📱 Responsividade
 A aplicação é totalmente responsiva e funciona em:
 
 ✅ Desktop
@@ -96,7 +96,7 @@ A aplicação é totalmente responsiva e funciona em:
 
 ✅ Smartphone
 
-🔄 Funcionalidades JavaScript
+## 🔄 Funcionalidades JavaScript
 Classes Principais
 SimpleQR - Wrapper para a biblioteca QRCode.js
 
@@ -111,16 +111,16 @@ buildWhatsAppLink() - Constrói URL do WhatsApp
 
 generateImageFromQr() - Prepara download do QR Code
 
-🌐 Deploy
+## 🌐 Deploy
 Hospedagem Git Hub Pages
 
 Qualquer servidor web estático
 
-📞 Suporte
+## 📞 Suporte
 Desenvolvido por: Gabriel Antonio Duarte Sales
 31 98244-8518
 
 Para dúvidas ou sugestões, entre em contato através do GitHub.
 
-📄 Licença
+## 📄 Licença
 Este projeto está sob a licença MIT. Sinta-se livre para usar e modificar.
