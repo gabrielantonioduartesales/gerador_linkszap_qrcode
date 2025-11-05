@@ -6,16 +6,21 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Gerador de Link WhatsApp + QR</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
-    <div class="wrap">
-        <header>
-            <h1>Gerador de Link WhatsApp + QR</h1>
-            <p class="lead">Crie link para WhatsApp e QR code, ou QR de qualquer link.</p>
-        </header>
 
+    <header>
+        <h1>Gerador de Link WhatsApp e QRCode</h1>
+        <p class="lead">Crie link para WhatsApp e QR code, ou QR de qualquer link.</p>
+    </header>
+
+    <div class="wrap">
         <section class="card">
+            <h2>Gerador de link e Qrcode para <strong style="color: #25D366;">WhatsApp</strong> <i
+                    class="fa-brands fa-whatsapp" style="color: #25D366;"></i></h2>
             <div class="row">
                 <div>
                     <label>DDI</label>
@@ -43,37 +48,44 @@
                 <button id="clearBtn" class="secondary">Limpar</button>
             </div>
 
-            <div class="output" id="output" style="display:none">
-                <div class="linkBox">
-                    <label>Link WhatsApp</label>
+            <div class="output" id="output">
+                <div class="left_linkbox">
+                    <h3>Link personalizado :</h3>
                     <p id="waLink"></p>
-                    <a id="openWa" target="_blank">Abrir</a>
-                    <a id="copyWa" href="#">Copiar</a>
+                    <div>
+                        <a id="openWa" target="_blank">Abrir</a>
+                        <a id="copyWa" href="#">Copiar</a>
+                    </div>
                 </div>
-                <div class="qrWrap">
-                    <label>QR WhatsApp</label>
+
+                <div class="right_linkbox">
+                    <h3>QrCode WhatsApp :</h3>
                     <div id="waQr"></div>
                     <a id="downloadWaQr">Download QR</a>
                 </div>
             </div>
         </section>
 
-        <section class="card">
-            <label>Gerar QR de qualquer link</label>
+        <section class="card output_link">
+            <h2>Gerador QRCode de qualquer <strong style="color: rgb(69, 69, 237)">Link</strong> <i
+                    class="fa-solid fa-link" style="color: rgb(69, 69, 237);"></i></h2>
             <div class="row">
                 <input id="linkInput" type="text" placeholder="https://exemplo.com" style="flex:1">
-                <button id="genLinkQr">Gerar QR</button>
+                <div>
+                    <button id="genLinkQr">Gerar QRCode</button>
+                    <button id="clearLinkQr" class="secondary">Limpar</button>
+                </div>
             </div>
-            <div id="linkQrBox" style="display:none">
+            <div id="linkQrBox">
                 <div id="linkQr"></div>
-                <p id="linkQrText"></p>
-                <a id="downloadLinkQr">Download QR</a>
-                <a id="openLink" target="_blank">Abrir link</a>
+                <a id="downloadLinkQr">Download QRCode</a>
             </div>
         </section>
     </div>
 
-    
+    <footer style="text-align: center;">
+        <p>© 2025 Gabriel Antonio Duarte Sales — Todos os direitos reservados.</p>
+    </footer>
 
     <script type="module" src="main.js"></script>
 </body>

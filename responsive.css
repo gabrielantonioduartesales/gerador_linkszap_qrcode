@@ -1,0 +1,30 @@
+@media (orientation: portrait) {
+    .wrap {
+        width: 100% !important;
+        flex-direction: column;
+    }
+
+    .wrap>section {
+        width: 100%;
+    }
+
+    .output {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .left_linkbox,
+    .right_linkbox{
+        width: 90%;
+    }
+
+    .row>div{
+        width: 200px;
+    }
+
+    button{
+        padding: 5%;
+    }
+}

@@ -3,8 +3,23 @@
         this.qr = null, this._el = t, this.clear()
     }
     e.prototype.makeCode = function (t) {
-        this.clear(); this.qr = new QRCode(this._el, { text: t, width: 200, height: 200 })
-    }, e.prototype.clear = function () {
+        this.clear();
+        this.qr = new QRCode(this._el, {
+            text: t,
+            width: 500,
+            height: 500
+        });
+        const canvas = this._el.querySelector('canvas');
+        if (canvas) {
+            const img = document.createElement('img');
+            img.src = canvas.toDataURL("image/png");
+            img.alt = "QR Code";
+            img.classList.add("qr-image");
+            this._el.innerHTML = "";
+            this._el.appendChild(img);
+        }
+    };
+    e.prototype.clear = function () {
         this._el.innerHTML = ""
     }, window.SimpleQR = e
 
@@ -24,7 +39,7 @@ const output = el('output'), waLink = el('waLink'), openWa = el('openWa'), copyW
 const waQrDiv = el('waQr'), downloadWaQr = el('downloadWaQr');
 
 const linkInput = el('linkInput'), genLinkQr = el('genLinkQr');
-const linkQrBox = el('linkQrBox'), linkQrDiv = el('linkQr'), linkQrText = el('linkQrText'), downloadLinkQr = el('downloadLinkQr'), openLink = el('openLink');
+const linkQrBox = el('linkQrBox'), linkQrDiv = el('linkQr'), downloadLinkQr = el('downloadLinkQr');
 
 let waQr = null, linkQr = null;
 
@@ -35,7 +50,7 @@ function generateImageFromQr(qrDiv, a, filename = 'qrcode.png') {
         const img = qrDiv.querySelector('img');
         if (img && img.src.startsWith('data:image')) {
             a.href = img.src;
-            a.download = filename; 
+            a.download = filename;
         } else {
             console.warn('QR Code não encontrado ou ainda não renderizado.');
         }
@@ -54,7 +69,7 @@ genBtn.addEventListener('click', () => {
     if (!waQr) waQr = new SimpleQR(waQrDiv);
     waQr.makeCode(link);
     generateImageFromQr(waQrDiv, downloadWaQr);
-    output.style.display = 'grid';
+    output.style.display = 'flex';
 })
 
 clearBtn.addEventListener('click', () => {
@@ -67,9 +82,17 @@ clearBtn.addEventListener('click', () => {
 genLinkQr.addEventListener('click', () => {
     const href = (linkInput.value || '').trim();
     if (!href) { alert('Insira um link'); return; }
-    linkQrText.textContent = href; openLink.href = href;
     if (!linkQr) linkQr = new SimpleQR(linkQrDiv);
     linkQr.makeCode(href);
     generateImageFromQr(linkQrDiv, downloadLinkQr);
-    linkQrBox.style.display = 'block';
+    linkQrBox.style.display = 'flex';
 })
+
+const clearLinkQr = el('clearLinkQr'); 
+
+clearLinkQr.addEventListener('click', () => {
+    linkInput.value = ''; 
+    linkQrBox.style.display = 'none'; 
+    if (linkQr) linkQr.clear();  
+});
+
