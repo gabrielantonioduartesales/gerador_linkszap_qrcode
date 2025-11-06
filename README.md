@@ -2,7 +2,7 @@
 
 Created by: Gabriel Antonio Duarte Sales
 
-## 🔗 Live Demo: 
+## 🔗 Live Demo: https://gabrielantonioduartesales.github.io/gerador_linkszap_qrcode/
 
 ## 📋 Description
 
